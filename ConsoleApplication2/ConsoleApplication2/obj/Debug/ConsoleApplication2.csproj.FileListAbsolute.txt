@@ -1,0 +1,5 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+F:\qingyun.tang\My.Test.Projects\zhaopin\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
+F:\qingyun.tang\My.Test.Projects\zhaopin\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+F:\qingyun.tang\My.Test.Projects\zhaopin\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb

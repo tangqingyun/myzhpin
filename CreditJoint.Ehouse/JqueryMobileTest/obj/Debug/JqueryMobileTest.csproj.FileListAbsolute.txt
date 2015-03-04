@@ -1,0 +1,5 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\CreditJoint.Ehouse\JqueryMobileTest\bin\JqueryMobileTest.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\CreditJoint.Ehouse\JqueryMobileTest\bin\JqueryMobileTest.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\CreditJoint.Ehouse\JqueryMobileTest\obj\Debug\JqueryMobileTest.csprojResolveAssemblyReference.cache
+F:\qingyun.tang\My.Test.Projects\zhaopin\CreditJoint.Ehouse\JqueryMobileTest\obj\Debug\JqueryMobileTest.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\CreditJoint.Ehouse\JqueryMobileTest\obj\Debug\JqueryMobileTest.pdb

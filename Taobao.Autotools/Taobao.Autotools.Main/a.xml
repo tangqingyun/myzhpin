@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <element name="宝贝标题" id="TitleID" type="HTMLInputElement" />
+  <element name="宝贝卖点" id="SubheadingID" type="HTMLTextAreaElement" />
+  <element name="一口价" id="buynow" type="HTMLInputElement" />
+  <element name="品牌" id="prop_20000" type="HTMLSelectElement" />
+  <element name="款式" id="prop_122276315" type="HTMLSelectElement" />
+  <element name="版型" id="prop_122216586" type="HTMLSelectElement" />
+  <element name="领型" id="prop_20663" type="HTMLSelectElement" />
+  <element name="风格" id="prop_20608" type="HTMLSelectElement" />
+  <element name="面料分类" id="prop_20551" type="HTMLSelectElement" />
+  <element name="袖型" id="prop_2917380" type="HTMLSelectElement" />
+  <element name="图案" id="prop_20603" type="HTMLSelectElement" />
+  <element name="材质" id="prop_20021" type="HTMLSelectElement" />
+  <element name="适用季节" id="prop_122216345" type="HTMLSelectElement" />
+  <element name="适用场景" id="prop_122216515" type="HTMLSelectElement" />
+  <element name="适用对象" id="prop_122216608" type="HTMLSelectElement" />
+  <element name="衣门襟" id="prop_31611" type="HTMLSelectElement" />
+  <element name="服装口袋样式" id="prop_122276336" type="HTMLSelectElement" />
+  <element name="服装款式细节" id="prop_122216588" type="HTMLSelectElement" />
+  <element name="厚薄" id="prop_122216507" type="HTMLSelectElement" />
+  <element name="基础风格" id="prop_42722636" type="HTMLSelectElement" />
+  <element name="细分风格" id="prop_42718685" type="HTMLSelectElement" />
+  <element name="服饰工艺" id="prop_122216589" type="HTMLSelectElement" />
+  <specs>
+    <spec name="" title="颜色">
+      <id>3232483,3232484,3232481,90554,28332,30156,60092,3232482,3232478,3232479,28340,28320,3232480,80882,28329,28326,28335,130164,28338,132069,107121,28327,28324,28341</id>
+      <checkbox>prop_1627207</checkbox>
+      <input>J_Alias_1627207</input>
+    </spec>
+    <spec name="" title="尺码">
+      <id>25051812,3271528,3271530,3271531,3267945,3271533,3271537,3271540,3271542,3267950,3271544,28383,86135221,86135247</id>
+      <checkbox>prop_20509</checkbox>
+      <input>J_Alias_20509</input>
+    </spec>
+  </specs>
+</root>

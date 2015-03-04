@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Sort>
+    <Chinese>男装</Chinese>
+    <English>NanZhuang</English>
+  </Sort>
+  <Sort>
+    <Chinese>女装</Chinese>
+    <English>NuZhuang</English>
+  </Sort>
+
+  <Sort>
+    <Chinese>女装1</Chinese>
+    <English>NuZhuang1</English>
+  </Sort>
+</root>

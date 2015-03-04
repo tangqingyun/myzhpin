@@ -1,0 +1,6 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\NetMysqlTest\NetMysqlTest\bin\Debug\NetMysqlTest.exe
+F:\qingyun.tang\My.Test.Projects\zhaopin\NetMysqlTest\NetMysqlTest\bin\Debug\NetMysqlTest.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\NetMysqlTest\NetMysqlTest\obj\Debug\NetMysqlTest.csprojResolveAssemblyReference.cache
+F:\qingyun.tang\My.Test.Projects\zhaopin\NetMysqlTest\NetMysqlTest\obj\Debug\NetMysqlTest.exe
+F:\qingyun.tang\My.Test.Projects\zhaopin\NetMysqlTest\NetMysqlTest\obj\Debug\NetMysqlTest.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\NetMysqlTest\NetMysqlTest\bin\Debug\MySql.Data.dll

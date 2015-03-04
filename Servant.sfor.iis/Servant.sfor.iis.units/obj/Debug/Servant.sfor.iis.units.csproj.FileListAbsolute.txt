@@ -1,0 +1,11 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.units.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.units.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\obj\Debug\Servant.sfor.iis.units.csprojResolveAssemblyReference.cache
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\obj\Debug\Servant.sfor.iis.units.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\obj\Debug\Servant.sfor.iis.units.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.controllers.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.models.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.controllers.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.models.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.server.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.units\bin\Debug\Servant.sfor.iis.server.pdb

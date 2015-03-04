@@ -1,0 +1,4 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\TestTranForXSLT\TestTranForXSLT\bin\TestTranForXSLT.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\TestTranForXSLT\TestTranForXSLT\bin\TestTranForXSLT.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\TestTranForXSLT\TestTranForXSLT\obj\Debug\TestTranForXSLT.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\TestTranForXSLT\TestTranForXSLT\obj\Debug\TestTranForXSLT.pdb

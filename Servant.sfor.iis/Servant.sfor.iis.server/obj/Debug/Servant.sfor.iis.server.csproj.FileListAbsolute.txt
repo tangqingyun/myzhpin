@@ -1,0 +1,5 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.server\bin\Debug\Servant.sfor.iis.server.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.server\bin\Debug\Servant.sfor.iis.server.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.server\obj\Debug\Servant.sfor.iis.server.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.server\obj\Debug\Servant.sfor.iis.server.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.server\obj\Debug\Servant.sfor.iis.server.csprojResolveAssemblyReference.cache

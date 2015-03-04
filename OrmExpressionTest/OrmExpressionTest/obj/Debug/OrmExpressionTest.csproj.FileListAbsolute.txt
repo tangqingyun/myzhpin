@@ -1,0 +1,5 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\OrmExpressionTest\OrmExpressionTest\bin\Debug\OrmExpressionTest.exe
+F:\qingyun.tang\My.Test.Projects\zhaopin\OrmExpressionTest\OrmExpressionTest\bin\Debug\OrmExpressionTest.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\OrmExpressionTest\OrmExpressionTest\obj\Debug\OrmExpressionTest.csprojResolveAssemblyReference.cache
+F:\qingyun.tang\My.Test.Projects\zhaopin\OrmExpressionTest\OrmExpressionTest\obj\Debug\OrmExpressionTest.exe
+F:\qingyun.tang\My.Test.Projects\zhaopin\OrmExpressionTest\OrmExpressionTest\obj\Debug\OrmExpressionTest.pdb

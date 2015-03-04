@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<personList>
+  <person>
+    <name>zhangsan</name>
+    <email>zhangsan@163.com</email>
+  </person>
+
+  <person>
+    <name>lisi</name>
+    <email>lisi@163.com</email>
+  </person>
+
+  <person>
+    <name>liuliu</name>
+    <email>liuliu@163.com</email>
+  </person>
+</personList>

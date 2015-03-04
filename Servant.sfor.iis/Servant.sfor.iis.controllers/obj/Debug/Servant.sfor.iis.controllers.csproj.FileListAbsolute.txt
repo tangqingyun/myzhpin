@@ -1,0 +1,5 @@
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.controllers\bin\Debug\Servant.sfor.iis.controllers.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.controllers\bin\Debug\Servant.sfor.iis.controllers.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.controllers\obj\Debug\Servant.sfor.iis.controllers.dll
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.controllers\obj\Debug\Servant.sfor.iis.controllers.pdb
+F:\qingyun.tang\My.Test.Projects\zhaopin\Servant.sfor.iis\Servant.sfor.iis.controllers\obj\Debug\Servant.sfor.iis.controllers.csprojResolveAssemblyReference.cache
