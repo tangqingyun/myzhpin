@@ -1,0 +1,4156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>我的课程</title>
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <script src="/SchJS/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/SchJS/Message.js" type="text/javascript"></script>
+   <script src="/SchJS/userCourse.js" type="text/javascript"></script>
+    <script src="/SchJS/index.js" type="text/javascript"></script>
+      <script src="/SchJS/Dialog2.js" type="text/javascript"></script>
+   
+    <script src="../SchJS/teacherscourse.js" type="text/javascript"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="personal.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NzkyMjkzMzEPZBYCZg9kFgICAw9kFgQCAQ9kFgICAQ8WAh4HVmlzaWJsZWhkAgUPZBYCZg8WBB4FY2xhc3MFCmZ0LXNlcnZpY2UfAGhkGAIFHWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkbXYxDw9kZmQFFmN0bDAwJEhlYWQxJE11bHRpVmlldzEPD2QCAWRagHkQRsvLLMAqNJEQyqeox3xtWq+SHFn745xOhEV86w==" />
+</div>
+
+    <div>
+     
+    
+<script type="text/javascript" src="/SchJS/SearchBoard.js"></script>
+<script type="text/javascript" src="/SchJS/parseURL.js"></script>
+
+<div class="header1">
+    <div class="nav_top">
+        <div class="header_top">
+            <ul class="header_top_L">
+            <li class="bg1"><a href="http://www.kjcity.com/" target="_blank">会计城</a></li>
+                <li><a href="/index.html">网校</a></li>
+                <li><a href="/sso.aspx?t=2" target="_blank">题库</a></li>
+                <li><a href="/sso.aspx?t=3" target="_blank">资讯</a></li>
+                <li><a href="/sso.aspx?t=5" target="_blank">社区</a></li>
+                <li><a href="http://baike.kjcity.com/" target="_blank">百科</a></li>
+                
+            </ul>
+            <ul class="header_top_R">
+                
+					<li class="bg2"><a href="javascript:void(0);" onclick="AddFavorite('会计城云网校',location.href)">收藏本站</a></li>
+                    <li><a href="javascript:void(0);" onclick="setHomepage()">设为首页</a></li>
+                    <li><a href="/shopping.html">购物车(0)</a></li>
+                        <li><a href="/UserManage/userinfo.html">
+                            343195957@qq.com</a></li><li><a class="no" id="logout" href="/logout.aspx">退出</a></li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="logo_fav">
+        <a class="logo" href="/index.html"></a><span class="sub_site" id="ele1"></span>
+        <div class="nav_search">
+            <span class="nav_search_input">
+                <input id="txtQueryWord" class="search_text" type="text" value="输入课程关键字搜索" onfocus="this.value=''"
+                    onblur="if(!value){value=defaultValue;}">
+            </span><a href="javascript:search();" class="nav_search_btn"> </a>
+
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu_L">
+            <div class="menu_r">
+                <a href="javascript:" id="allCourse" class="a_active">课程分类 ▼</a> <a name="bar" data-type="0" href="/index.html" >
+                    首页</a>
+                
+                <a 
+                    href="/kaozhengkecheng.html?fmid=1&id=3"
+                    name="bar" data-type="2">
+                    考证课程</a>
+                
+                <a 
+                    href="/shizhankecheng.html?fmid=8&id=9"
+                    name="bar" data-type="3">
+                    实战课程</a>
+                
+                <a href="/link.aspx" name="bar" data-type="4" class='action'>个人中心</a>
+            </div>
+            <!-- 全部课程 -->
+
+            <div class="all">
+                
+				<dl>
+					<dt><a href="javascript:">从业资格</a></dt>
+					<dd><a href="/congyezhige/cyzg.html">会计从业</a></dd>
+					<dd><a href="/course_204_.html">银行从业</a></dd>
+					<dd><a href="/course_207_.html">证券从业</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="javascript:">专业职称</a></dt>
+					<dd><a href="/chujikuaiji/cjkj.html">初级会计师</a></dd>
+					<dd><a href="/zhongjikuaiji/zjkj.html">中级会计师</a></dd>
+					<dd><a href="/kaozhengkecheng/zjjjs.html?fmid=1&id=42">中级经济师</a></dd>
+                    <dd><a href="javascript:">高级会计师</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="javascript:">执业资格</a></dt>
+					<dd><a href="/zhucekuaiji/zckjs.html">注册会计师</a></dd>
+					<dd><a href="/kaozhengkecheng/cjsckjs.html?fmid=1&id=39">初级实操会计师</a></dd>
+				</dl>
+				<dl class="no">
+					<dt><a href="javascript:">实战课程</a></dt>
+					<dd><a href="/shuiwukecheng/swkc.html">税务管理</a></dd>
+					<dd><a href="/hangyeshiwu/hysw.html">行业会计</a></dd>
+					<dd><a href="/caiwuguanli/cwgl.html">财务管理</a></dd>
+                    <dd><a href="/gangweicaiwu/gwcw.html">岗位财务</a></dd>
+                    <dd><a href="/shizhankecheng/zzsx.html?fmid=8&id=56">真账实训</a></dd>
+				</dl>
+			</div>
+
+
+
+
+
+
+        </div>
+        
+    </div>
+    <!-- 菜单 -->
+        <div>
+        <div class="menu_bottom" id="content0" style="display: none;">
+                <div class="menu_bg">
+                    <ul>
+
+                        <li><a href="/index.html#ksxk">快速选课</a></li>
+                        
+                        <li><a href="/index.html#cnxh">猜你喜欢</a></li>
+                        
+                        <li><a href="/index.html#zxkc">最新课程</a></li>
+                        
+                        <li><a href="/index.html#rmkc">热门课程</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+
+            
+            <div class="menu_bottom" id="content2" style="display: none">
+                <div class="menu_bg">
+                    <ul>
+                        
+                        
+                        <li class='bga' ><a href="/kaozhengkecheng/kjcyzg.html?fmid=1&id=3">全国版会计从业资格</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/kjcjzc.html?fmid=1&id=4">会计初级职称</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/kjzjzg.html?fmid=1&id=5">会计中级职称</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/zckjs.html?fmid=1&id=6">注册会计师</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/cjsckjs.html?fmid=1&id=39">初级实操会计师</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/zjcyzgz.html?fmid=1&id=40">证券从业资格证</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/yhcyzgz.html?fmid=1&id=41">银行从业资格证</a></li>
+                        
+                        <li  ><a href="/kaozhengkecheng/zjjjs.html?fmid=1&id=42">中级经济师</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="menu_bottom" id="content3" style="display: none">
+                <div class="menu_bg">
+                    <ul>
+                        
+                        
+                        <li class='bga' ><a href="/shizhankecheng/swkc.html?fmid=8&id=9">税务课程</a></li>
+                        
+                        <li  ><a href="/shizhankecheng/hysw.html?fmid=8&id=10">行业实务</a></li>
+                        
+                        <li  ><a href="/shizhankecheng/cwgl.html?fmid=8&id=11">财务管理</a></li>
+                        
+                        <li  ><a href="/shizhankecheng/gwcw.html?fmid=8&id=12">岗位财务</a></li>
+                        
+                        <li  ><a href="/shizhankecheng/zzsx.html?fmid=8&id=56">真账实训</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+              <div class="menu_bottom" id="content4" style="display:none">
+				<div class="menu_bg">
+					<ul>
+						<li><a href="/UserManage/useraccount.html">我的账户</a></li>
+						<li><a href="/UserManage/personal.html">我的课程</a></li>
+						<li><a href="/UserManage/userfaq.html">我的问答</a></li>
+						<li><a href="/UserManage/usernote.html">我的笔记</a></li>
+					</ul>
+				</div>
+			</div>
+    </div>
+
+
+    
+
+    <div class="clear">
+    </div>
+</div>
+
+        
+    <div class="content1"><div class="help_center">
+        
+<script src="/SchJS/JqPost.js" type="text/javascript"></script>
+<div class="personal_L">
+    
+    <div class="personal_Af">
+        <div class="personal_Af_top">
+            <p>
+                个人中心</p>
+        </div>
+        <div class="personal_Af_bottom">
+            <div class="data">
+                
+                <div class="tx">
+                    <a href="javascript:">
+                        <img src="/images/default_avatar_28.png" onerror="this.src='../images/default_avatar_28.png'"
+                            alt=""></a></div>
+                
+                <div class="hyhl">
+                    <p>
+                        343195957@qq.com，<br>
+                        欢迎回来</p>
+                </div>
+                <span><a href="userinfo.html">修改资料</a></span>
+            </div>
+            <ul class="jg">
+                <li>
+                    <div class="gw">
+                        <img src="/images/gw_01.png" /></div>
+                    <p>
+                        ￥40.00元</p>
+                    <span><a href="useraccount.html">金额明细&gt;&gt;</a></span></li>
+                <li class="li1">
+                    <div class="gw">
+                        <img src="/images/gw_02.png" /></div>
+                    <p>
+                        ￥0元</p>
+                    <span><a href="mycashback.html">返值明细&gt;&gt;</a></span></li>
+            </ul>
+            <ul class="fj">
+                <li>
+                    <div class="gw">
+                        <img src="/images/gw_03.png" /></div>
+                    <p>
+                        1636分</p>
+                    <span><a href="userpoint.html">积分明细&gt;&gt;</a></span></li>
+                <li class="li1">
+                    <div class="gw">
+                        <img src="/images/gw_04.png" /></div>
+                    <p>
+                        2张</p>
+                    <span><a href="mycoupon.html">使用优惠券&gt;&gt;</a></span></li>
+            </ul>
+        </div>
+    </div>
+    <dl class="personal_Bf">
+        <dt><a href="javascript:void(0);">我的云网校</a></dt>
+        <dd>
+            <a href="personal.html">我的课程（21）</a></dd>
+        <dd>
+            <a href="userfaq.html">我的问答（0）</a></dd>
+        <dd>
+            <a href="usernote.html">我的笔记（0）</a></dd>
+        <dd>
+            <a href="learnmap.html">我的学习地图</a></dd>
+        <dd>
+            <a href="useraccount.html">我的账户</a></dd>
+        <dd>
+            <a href="myorder.html">我的订单（1）</a></dd>
+            <dd>
+            <a href="usertask.html">任务中心</a></dd>
+    </dl>
+    
+    <div class="personal_Cf">
+        <div class="personal_Cf_top">
+            <p>
+                <a href="/sso.aspx?t=2" target="_blank">我的源题库</a></p>
+        </div>
+        <div class="rew">
+            <span><a href="/sso.aspx?t=4" target="_blank">我的人才网</a></span>
+        </div>
+    </div>
+
+    <div class="Qrcode"><img src="/images/kjcity.jpg"></div>
+    <input type="hidden" id="posturl" value="/UserManage/personal.html" />
+</div>
+<script language="javascript" type="text/javascript">
+    $(function () {
+        try { $("#tx_href").val($("span_tx").val()); } catch (e) { }
+    });
+</script>
+        
+                 <div id="ctl00_ContentPlaceHolder1_div1" class="personal_R">
+                   
+<script src="/SchJS/MsgBar.js" type="text/javascript"></script>
+
+<ul class="meter">
+    
+    <li>
+        <p>
+            优惠券过期提醒：<span><a href="mycoupon.html">
+                301</a></span>天
+        </p>
+    </li>
+    <li>
+        <p>
+            
+            /
+            
+            未付款订单：<span><a href="myorder.html?ob=1">
+                0</a></span>单
+        </p>
+    </li>
+    
+    <li class="li1"><a href="javascript:void(0);" name="closeMsg"></a></li>
+</ul>
+
+<input type="hidden" id="btnCloseMsg" value="ctl00_ContentPlaceHolder1_usermsg3" />
+
+            <ul class="learn_Af_top">
+                <li class="action" name="stu_li" data-val="stu_li_1">我购买的课程</li>
+                <li name="stu_li" data-val="stu_li_2">我收藏的课程</li>
+                <li name="stu_li" data-val="stu_li_3">我的学习卡<img src="/images/class_card_01.png" /></li>
+                <li name="stu_li" data-val="stu_li_4">快速选课</li>
+            </ul>
+            <div class="learnesing" id="stu_li_1">
+              
+                
+
+<ul class="learn_Bf">
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_1__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2014/1202/20141222393113737.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_1__.html" target="_blank">
+                2015旧大纲会计基础-精讲班</a></h5>
+   
+            <div class="leng"><p title="刘英苗">刘英苗</p><span>18时24分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 9.53479952936917px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_1_5_.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_3__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2014/1120/20141120537498172.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_3__.html" target="_blank">
+                2015旧大纲会计基础-串讲押题班</a></h5>
+   
+            <div class="leng"><p title="刘英苗">刘英苗</p><span>04时40分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_3__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_4__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2014/1120/20141120458348035.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_4__.html" target="_blank">
+                2015旧大纲财经法规与职业道德-精讲班</a></h5>
+   
+            <div class="leng"><p title="杨鑫">杨鑫</p><span>19时37分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_4__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_6__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2014/1120/20141120458227797.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_6__.html" target="_blank">
+                2015旧大纲财经法规与职业道德-串讲押题班</a></h5>
+   
+            <div class="leng"><p title="杨鑫">杨鑫</p><span>04时32分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_6__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_9__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2014/1120/20141120582568575.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_9__.html" target="_blank">
+                2015旧大纲初级电算化-串讲押题班</a></h5>
+   
+            <div class="leng"><p title="张李桃">张李桃</p><span>02时50分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_9__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_7__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2014/1120/20141120592228.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_7__.html" target="_blank">
+                2015旧大纲初级电算化-精讲班</a></h5>
+   
+            <div class="leng"><p title="张李桃">张李桃</p><span>12时40分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_7__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_8__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2014/1120/20141120592889798.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_8__.html" target="_blank">
+                2015旧大纲初级电算化-习题班</a></h5>
+   
+            <div class="leng"><p title="张李桃">张李桃</p><span>02时52分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_8__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_2__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2014/1120/201411205391169930.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_2__.html" target="_blank">
+                2015旧大纲会计基础-习题班</a></h5>
+   
+            <div class="leng"><p title="刘英苗">刘英苗</p><span>07时56分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_2__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_5__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2014/1120/2014112045928757.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_5__.html" target="_blank">
+                2015旧大纲财经法规与职业道德-习题班</a></h5>
+   
+            <div class="leng"><p title="杨鑫">杨鑫</p><span>05时20分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_5__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_126__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2014/1210/201412109281650349.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_126__.html" target="_blank">
+                2015新从业-会计基础-精讲班</a></h5>
+   
+            <div class="leng"><p title="刘英苗">刘英苗</p><span>16时31分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_126__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_125__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2014/1210/201412109353040233.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_125__.html" target="_blank">
+                2015新从业-会计基础-习题班</a></h5>
+   
+            <div class="leng"><p title="刘英苗">刘英苗</p><span>06时12分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_125__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_107__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2014/1210/201412109374972653.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_107__.html" target="_blank">
+                2015新从业-会计基础-串讲押题班</a></h5>
+   
+            <div class="leng"><p title="刘英苗">刘英苗</p><span>04时44分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_107__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_153__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2014/1210/20141210944880761.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_153__.html" target="_blank">
+                2015新从业-财经法规与会计职业道德-精讲班</a></h5>
+   
+            <div class="leng"><p title="杨鑫">杨鑫</p><span>17时51分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_153__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_176__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2014/1210/201412109463025213.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_176__.html" target="_blank">
+                2015新从业-财经法规与会计职业道德-习题班</a></h5>
+   
+            <div class="leng"><p title="杨鑫">杨鑫</p><span>05时48分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_176__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_106__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2014/1210/20141210950252253.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_106__.html" target="_blank">
+                2015新从业-财经法规与职业道德-串讲押题班</a></h5>
+   
+            <div class="leng"><p title="杨鑫">杨鑫</p><span>03时22分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_106__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_108__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2014/1210/201412101045459419.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_108__.html" target="_blank">
+                2015新从业-初级电算化-串讲押题班</a></h5>
+   
+            <div class="leng"><p title="张李桃">张李桃</p><span>03时31分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_108__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_198__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2015/0109/20151944144421.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_198__.html" target="_blank">
+                2015新从业-初级电算化-精讲班</a></h5>
+   
+            <div class="leng"><p title="张李桃">张李桃</p><span>04时44分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_198__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_199__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2015/0109/201519441354788.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_199__.html" target="_blank">
+                2015新从业-初级电算化-习题班</a></h5>
+   
+            <div class="leng"><p title="张李桃">张李桃</p><span><label style='color:red'>暂无章节</label>分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_199__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_201__.html" target="_blank">
+                <img title="精讲班" src="http://www.kjcity.com:8080/upload/image/2015/0207/2015271102549220.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_201__.html" target="_blank">
+                2015会计基础—精讲班</a></h5>
+   
+            <div class="leng"><p title="郭健">郭健</p><span>17时18分分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_201_2814_.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_202__.html" target="_blank">
+                <img title="习题班" src="http://www.kjcity.com:8080/upload/image/2015/0207/2015271175575541.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_202__.html" target="_blank">
+                2015会计基础—习题班</a></h5>
+   
+            <div class="leng"><p title="郭健">郭健</p><span><label style='color:red'>暂无章节</label>分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_202__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+    <li>
+        <div class="hq">
+            
+            <a href="/UserManage/chapters_play_203__.html" target="_blank">
+                <img title="串讲押题班" src="http://www.kjcity.com:8080/upload/image/2015/0207/20152711145588088.jpg"
+                    onerror="this.src='../images/class_pic_default_240.png'" /></a>
+        </div>
+        <h5>
+            <a href="/UserManage/chapters_play_203__.html" target="_blank">
+                2015会计基础—押题班</a></h5>
+   
+            <div class="leng"><p title="郭健">郭健</p><span><label style='color:red'>暂无章节</label>分钟</span></div>
+        <div class="bord1">
+            <div class="bord2" style="width: 0px;">
+            </div>
+        </div>
+        <font>
+        
+            <a  href="/UserManage/chapters_play_203__.html" target="_blank">继续学习</a></font>
+    </li>
+    
+            </div>
+            <div class="learnesing" id="stu_li_2" style="display: none">
+        
+                    
+          
+                
+<ul class="collection_nr">
+    
+</ul>
+
+            </div>
+            <div class="learnesing" id="stu_li_3" style="display: none">
+            <div class="class_card">
+						<div class="tiva"><a id="btnSubmit" href="javascript:">激活新的学习卡</a></div>
+						<div class="order01"><div class="order02"></div></div>
+						<div class="detailing">
+							<ul>
+								<li class="li1">激活卡号</li>
+								<li>课程名称</li>
+								<li>激活时间</li>
+								<li>学习卡金额</li>
+								
+							</ul>
+						</div>
+					
+						<div class="detailing_num">
+
+
+                        
+
+						</div>
+					</div>
+            </div>
+            <div class="learnesing" id="stu_li_4" style="display: none">
+                
+
+                   <div class="content_selection cleartop">
+            <div class="selection_L">
+                <div class="selection_L_class">
+                    <div class="class_top">
+                        <ul class="class_top_L" id="lstTab" data-pageindex="1">
+                            
+                            <li class="action" >
+                                <a href="javascript:void(0)" data-type="href" data-val="tab3"
+                                    data-type2='3'>
+                                    全国版会计从业资格</a></li>
+                            
+                            <li  >
+                                <a href="javascript:void(0)" data-type="href" data-val="tab4"
+                                    data-type2='4'>
+                                    会计初级职称</a></li>
+                            
+                            <li  >
+                                <a href="javascript:void(0)" data-type="href" data-val="tab5"
+                                    data-type2='5'>
+                                    会计中级职称</a></li>
+                            
+                            <li  >
+                                <a href="javascript:void(0)" data-type="href" data-val="tab6"
+                                    data-type2='6'>
+                                    注册会计师</a></li>
+                            
+                            <li  >
+                                <a href="javascript:void(0)" data-type="href" data-val="tab40"
+                                    data-type2='40'>
+                                    证券从业资格证</a></li>
+                            
+                            <li  >
+                                <a href="javascript:void(0)" data-type="href" data-val="tab41"
+                                    data-type2='41'>
+                                    银行从业资格证</a></li>
+                            
+                            <li  style='display:none'>
+                                <a href="javascript:void(0)" data-type="href" data-val="tab42"
+                                    data-type2='42'>
+                                    中级经济师</a></li>
+                            
+                            <li  style='display:none'>
+                                <a href="javascript:void(0)" data-type="href" data-val="tab9"
+                                    data-type2='9'>
+                                    税务课程</a></li>
+                            
+                            <li  style='display:none'>
+                                <a href="javascript:void(0)" data-type="href" data-val="tab10"
+                                    data-type2='10'>
+                                    行业实务</a></li>
+                            
+                            <li  style='display:none'>
+                                <a href="javascript:void(0)" data-type="href" data-val="tab11"
+                                    data-type2='11'>
+                                    财务管理</a></li>
+                            
+                            <li  style='display:none'>
+                                <a href="javascript:void(0)" data-type="href" data-val="tab12"
+                                    data-type2='12'>
+                                    岗位财务</a></li>
+                            
+                            <li  style='display:none'>
+                                <a href="javascript:void(0)" data-type="href" data-val="tab56"
+                                    data-type2='56'>
+                                    真账实训</a></li>
+                            
+                        </ul>
+                        <ul class="class_switch" id="splitpager">
+                            <li id="btnPre" title="上一组">◀</li>
+                            <li id="btnNext" title="下一组">▶</li>
+                        </ul>
+                    </div>
+                    
+            <div class="nav_table" name="tab3" data-type="nav" style="display:none">
+            
+                        <table class="table">
+								<tr>
+									<th class="th1">单项课程</th>
+									<th>精讲班</th>
+									<th>习题班</th>
+									<th class="no">串讲押题班</th>
+								</tr>
+							</table>
+                            <div class="name">
+       <table id="tab3">
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="216"><span> 
+                    2015会计从业新大纲《财经法规与会计职业道德》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_7.html"> 主讲：杨鑫</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",216," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",216,"
+                    data-price="210" data-ispackage="false"></a>￥210
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",217," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",217,"
+                    data-price="84" data-ispackage="false"></a>￥84
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",219," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",219,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+            </td>
+            
+        </tr>
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="220"><span> 
+                    2015会计从业新大纲《初级电算化》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_8.html"> 主讲：张李桃</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",291," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",291,"
+                    data-price="210" data-ispackage="false"></a>￥210
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",292," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",292,"
+                    data-price="84" data-ispackage="false"></a>￥84
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",220," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",220,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+            </td>
+            
+        </tr>
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="214"><span> 
+                    2015会计从业新大纲《会计基础》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_1.html"> 主讲：刘英苗</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",304," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",304,"
+                    data-price="210" data-ispackage="false"></a>￥210
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",214," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",214,"
+                    data-price="84" data-ispackage="false"></a>￥84
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",215," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="3" data-id=",215,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+            </td>
+            
+        </tr>
+        
+ 
+        <tr class="tr1">
+            <th class="th2" colspan="3">
+                套餐课程
+            </th>
+            <th class="th3" colspan="1">
+                套餐价格
+            </th>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="157"><span
+                onclick="javascript:window.location.href='/course-package_157_.html';"
+                >   会计从业VIP包过班</span>
+                <P>(综合班+不通过全额退费（协议保障）+学习直播交流+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_157_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="3"
+                    data-productid=",157," data-id=",1,2,213,214,215,216,217,219,220,291,292,3,30,304,305,306,35,4,40,41,5,"
+                    data-price="840" data-ispackage="true" data-checked2="false"></a>
+                ￥840
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="185"><span
+                onclick="javascript:window.location.href='/course-package_185_.html';"
+                >   会计从业保过班</span>
+                <P>(综合班+免费重学1次+学习直播交流+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_185_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="3"
+                    data-productid=",185," data-id=",1,2,213,214,215,216,217,219,220,291,292,3,30,304,305,306,35,4,40,41,5,"
+                    data-price="700" data-ispackage="true" data-checked2="false"></a>
+                ￥700
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="64"><span
+                onclick="javascript:window.location.href='/course-package_64_.html';"
+                >   会计从业全程综合班</span>
+                <P>(三科精讲班+三科习题班+三科串讲押题班+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_64_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="3"
+                    data-productid=",64," data-id=",1,2,213,214,215,216,217,219,220,291,292,3,30,304,305,306,35,4,40,41,5,"
+                    data-price="560" data-ispackage="true" data-checked2="false"></a>
+                ￥560
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="92"><span
+                onclick="javascript:window.location.href='/course-package_92_.html';"
+                >
+                    会计从业三科精讲班</span>
+                         <P>(会计基础+财经法规与职业道德+会计电算化+无纸化考试系统)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="3"
+                    data-productid=",92," data-id=",1,213,216,291,3,30,304,"
+                    data-price="455" data-ispackage="true" data-checked2="false"></a>
+                ￥455
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="93"><span
+                onclick="javascript:window.location.href='/course-package_93_.html';"
+                >
+                    会计从业三科习题班</span>
+                         <P>(会计基础+财经法规与职业道德+会计电算化)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="3"
+                    data-productid=",93," data-id=",214,217,292,305,35,40,41,"
+                    data-price="140" data-ispackage="true" data-checked2="false"></a>
+                ￥140
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="94"><span
+                onclick="javascript:window.location.href='/course-package_94_.html';"
+                >
+                    会计从业三科串讲押题班</span>
+                         <P>(会计基础+财经法规与会计职业道德+会计电算化)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="3"
+                    data-productid=",94," data-id=",2,215,219,220,306,4,5,"
+                    data-price="105" data-ispackage="true" data-checked2="false"></a>
+                ￥105
+            </td>
+        </tr>
+        
+    </table></div></div>
+    
+            <div class="nav_table" name="tab4" data-type="nav" style="display:none">
+            
+                        <table class="table">
+								<tr>
+									<th class="th1">单项课程</th>
+									<th>精讲班</th>
+									<th>习题班</th>
+									<th class="no">串讲押题班</th>
+								</tr>
+							</table>
+                            <div class="name">
+       <table id="tab4">
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="307"><span> 
+                    2015初级会计《初级会计实务》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_9.html"> 主讲：郭健</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",307," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="4" data-id=",307,"
+                    data-price="280" data-ispackage="false"></a>￥280
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",308," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="4" data-id=",308,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",309," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="4" data-id=",309,"
+                    data-price="84" data-ispackage="false"></a>￥84
+                
+            </td>
+            
+        </tr>
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="310"><span> 
+                    2015初级会计《经济法基础》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_7.html"> 主讲：杨鑫</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",310," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="4" data-id=",310,"
+                    data-price="280" data-ispackage="false"></a>￥280
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",311," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="4" data-id=",311,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",312," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="4" data-id=",312,"
+                    data-price="84" data-ispackage="false"></a>￥84
+                
+            </td>
+            
+        </tr>
+        
+ 
+        <tr class="tr1">
+            <th class="th2" colspan="3">
+                套餐课程
+            </th>
+            <th class="th3" colspan="1">
+                套餐价格
+            </th>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="100"><span
+                onclick="javascript:window.location.href='/course-package_100_.html';"
+                >   初级会计VIP包过班</span>
+                <P>(综合班+不通过全额退费（协议保障）+学习直播交流+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_100_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="4"
+                    data-productid=",100," data-id=",173,174,307,308,309,310,311,312,57,58,59,60,61,62,"
+                    data-price="840" data-ispackage="true" data-checked2="false"></a>
+                ￥840
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="99"><span
+                onclick="javascript:window.location.href='/course-package_99_.html';"
+                >   初级会计保过班</span>
+                <P>(综合班+免费重学1次+学习直播交流+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_99_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="4"
+                    data-productid=",99," data-id=",173,174,307,308,309,310,311,312,57,58,59,60,61,62,"
+                    data-price="700" data-ispackage="true" data-checked2="false"></a>
+                ￥700
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="98"><span
+                onclick="javascript:window.location.href='/course-package_98_.html';"
+                >   初级会计全程综合班</span>
+                <P>(精讲班+习题班+串讲押题班+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_98_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="4"
+                    data-productid=",98," data-id=",173,174,307,308,309,310,311,312,57,58,59,60,61,62,"
+                    data-price="560" data-ispackage="true" data-checked2="false"></a>
+                ￥560
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="95"><span
+                onclick="javascript:window.location.href='/course-package_95_.html';"
+                >
+                    初级会计两科精讲班</span>
+                         <P>(经济法基础+初级会计实务+无纸化考试系统)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="4"
+                    data-productid=",95," data-id=",307,310,57,58,"
+                    data-price="455" data-ispackage="true" data-checked2="false"></a>
+                ￥455
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="96"><span
+                onclick="javascript:window.location.href='/course-package_96_.html';"
+                >
+                    初级会计两科习题班</span>
+                         <P>(经济法基础+初级会计实务)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="4"
+                    data-productid=",96," data-id=",308,311,59,60,"
+                    data-price="140" data-ispackage="true" data-checked2="false"></a>
+                ￥140
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="97"><span
+                onclick="javascript:window.location.href='/course-package_97_.html';"
+                >
+                    初级会计两科串讲押题</span>
+                         <P>(经济法基础+初级会计实务)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="4"
+                    data-productid=",97," data-id=",309,312,61,62,"
+                    data-price="105" data-ispackage="true" data-checked2="false"></a>
+                ￥105
+            </td>
+        </tr>
+        
+    </table></div></div>
+    
+            <div class="nav_table" name="tab5" data-type="nav" style="display:none">
+            
+                        <table class="table">
+								<tr>
+									<th class="th1">单项课程</th>
+									<th>精讲班</th>
+									<th>习题班</th>
+									<th class="no">串讲押题班</th>
+								</tr>
+							</table>
+                            <div class="name">
+       <table id="tab5">
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="12"><span> 
+                    中级会计《经济法》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_16.html"> 主讲：李芳</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",12," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",12,"
+                    data-price="341.6" data-ispackage="false"></a>￥341.6
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",104," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",104,"
+                    data-price="140" data-ispackage="false"></a>￥140
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",13," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",13,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+            </td>
+            
+        </tr>
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="54"><span> 
+                    中级会计《财务管理》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_18.html"> 主讲：卢军</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",54," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",54,"
+                    data-price="341.6" data-ispackage="false"></a>￥341.6
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",103," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",103,"
+                    data-price="140" data-ispackage="false"></a>￥140
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",55," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",55,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+            </td>
+            
+        </tr>
+        
+        <tr>
+           
+            <td class="td1">
+               <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="25"><span> 
+                    中级会计《中级会计实务》</span>
+                    
+                    <p>
+                       <a href="/teacher_info_17.html"> 主讲：段小法</a></p>
+                
+                </a>
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",39," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",39,"
+                    data-price="341.6" data-ispackage="false"></a>￥341.6
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",102," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",102,"
+                    data-price="140" data-ispackage="false"></a>￥140
+                
+            </td>
+            
+            <td>
+                
+                <a class="checkbox unchecked" data-productid=",25," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="5" data-id=",25,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+            </td>
+            
+        </tr>
+        
+ 
+        <tr class="tr1">
+            <th class="th2" colspan="3">
+                套餐课程
+            </th>
+            <th class="th3" colspan="1">
+                套餐价格
+            </th>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="110"><span
+                onclick="javascript:window.location.href='/course-package_110_.html';"
+                >   中级会计VIP包过班</span>
+                <P>(综合班+不通过全额退费（协议保障）+学习直播交流+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_110_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="5"
+                    data-productid=",110," data-id=",102,103,104,12,13,25,39,54,55,"
+                    data-price="1680" data-ispackage="true" data-checked2="false"></a>
+                ￥1680
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="109"><span
+                onclick="javascript:window.location.href='/course-package_109_.html';"
+                >   中级会计保过班</span>
+                <P>(综合班+免费重学1次+学习直播交流+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_109_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="5"
+                    data-productid=",109," data-id=",102,103,104,12,13,25,39,54,55,"
+                    data-price="1400" data-ispackage="true" data-checked2="false"></a>
+                ￥1400
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td3" colspan="3">
+                <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="108"><span
+                onclick="javascript:window.location.href='/course-package_108_.html';"
+                >   中级会计全程综合班</span>
+                <P>(精讲班+习题班+串讲押题班+无纸化考试系统)&nbsp;&nbsp;
+                </P>
+                <div class="rm" style="margin-top: -3px"><img onclick="javascript:window.location.href='/course-package_108_.html';" src="/taoye/images/ac_hot_gif.gif" width="45" height="25"></div></a>
+            </td>
+            <td class="td5" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="5"
+                    data-productid=",108," data-id=",102,103,104,12,13,25,39,54,55,"
+                    data-price="1050" data-ispackage="true" data-checked2="false"></a>
+                ￥1050
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="105"><span
+                onclick="javascript:window.location.href='/course-package_105_.html';"
+                >
+                    中级会计三科精讲班</span>
+                         <P>(经济法+中级会计实务+财务管理+无纸化考试系统)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="5"
+                    data-productid=",105," data-id=",12,39,54,"
+                    data-price="840" data-ispackage="true" data-checked2="false"></a>
+                ￥840
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="106"><span
+                onclick="javascript:window.location.href='/course-package_106_.html';"
+                >
+                    中级会计三科习题班</span>
+                         <P>(经济法+中级会计实务+财务管理)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="5"
+                    data-productid=",106," data-id=",102,103,104,"
+                    data-price="280" data-ispackage="true" data-checked2="false"></a>
+                ￥280
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td2" colspan="3">
+            
+                <a href="javascript:void(0);"> <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="107"><span
+                onclick="javascript:window.location.href='/course-package_107_.html';"
+                >
+                    中级会计三科串讲押题班</span>
+                         <P>(经济法+中级会计实务+财务管理)
+                </P>
+           
+                    </a>
+            </td>
+            <td class="td4" colspan="1">
+                <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="5"
+                    data-productid=",107," data-id=",13,25,55,"
+                    data-price="210" data-ispackage="true" data-checked2="false"></a>
+                ￥210
+            </td>
+        </tr>
+        
+    </table></div></div>
+    
+                    
+<div class="zve_table" name="tab6" data-type="nav" style="display:none"> 
+
+<table class="table_gu">
+							<tr>
+								<td class="td1">课程名称</td>
+								<td>精讲班</td>
+								<td>习题班</td>
+								<td>串讲押题班</td>
+								<td>综合班</td>
+								<td>保过班</td>
+								<td>VIP包过班</td>
+								<td>主讲老师</td>
+							</tr>
+						</table>
+
+<div class="name">
+<table id="tab6">
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="14"><span
+                
+                >
+                    注会《审计》</span>
+               
+            </a>
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",14," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",14,"
+                    data-price="245" data-ispackage="false"></a>￥245
+                
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",113," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",113,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+        </td>
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",114," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",114,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+                
+        </td>
+
+        
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",126," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",113,114,14,"
+                    data-price="350" data-ispackage="true"></a>￥350
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",127," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",113,114,14,"
+                    data-price="455" data-ispackage="true"></a>￥455
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",128," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",113,114,14,"
+                    data-price="686" data-ispackage="true"></a>￥686
+          
+        </td>
+          
+ 
+        
+        <td>
+        
+        
+           <a href="/teacher_info_52.html">
+            邬励军</a>
+            </td>
+        </tr>
+  
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="15"><span
+                
+                >
+                    注会《公司战略与风险管理》</span>
+               
+            </a>
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",15," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",15,"
+                    data-price="245" data-ispackage="false"></a>￥245
+                
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",121," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",121,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+        </td>
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",122," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",122,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+                
+        </td>
+
+        
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",138," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",121,122,15,"
+                    data-price="350" data-ispackage="true"></a>￥350
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",139," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",121,122,15,"
+                    data-price="455" data-ispackage="true"></a>￥455
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",140," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",121,122,15,"
+                    data-price="686" data-ispackage="true"></a>￥686
+          
+        </td>
+          
+ 
+        
+        <td>
+        
+        
+           <a href="/teacher_info_22.html">
+            喻昊</a>
+            </td>
+        </tr>
+  
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="16"><span
+                
+                >
+                    注会《经济法》</span>
+               
+            </a>
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",16," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",16,"
+                    data-price="245" data-ispackage="false"></a>￥245
+                
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",117," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",117,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+        </td>
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",118," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",118,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+                
+        </td>
+
+        
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",132," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",117,118,16,"
+                    data-price="350" data-ispackage="true"></a>￥350
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",133," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",117,118,16,"
+                    data-price="455" data-ispackage="true"></a>￥455
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",134," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",117,118,16,"
+                    data-price="686" data-ispackage="true"></a>￥686
+          
+        </td>
+          
+ 
+        
+        <td>
+        
+        
+           <a href="/teacher_info_21.html">
+            钟勇军</a>
+            </td>
+        </tr>
+  
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="20"><span
+                
+                >
+                    注会《会计》</span>
+               
+            </a>
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",20," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",20,"
+                    data-price="245" data-ispackage="false"></a>￥245
+                
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",111," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",111,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+        </td>
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",112," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",112,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+                
+        </td>
+
+        
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",123," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",111,112,20,"
+                    data-price="350" data-ispackage="true"></a>￥350
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",124," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",111,112,20,"
+                    data-price="455" data-ispackage="true"></a>￥455
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",125," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",111,112,20,"
+                    data-price="686" data-ispackage="true"></a>￥686
+          
+        </td>
+          
+ 
+        
+        <td>
+        
+        
+           <a href="/teacher_info_19.html">
+            郭黎</a>
+            </td>
+        </tr>
+  
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="56"><span
+                
+                >
+                    注会《税法》</span>
+               
+            </a>
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",56," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",56,"
+                    data-price="245" data-ispackage="false"></a>￥245
+                
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",115," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",115,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+        </td>
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",116," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",116,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+                
+        </td>
+
+        
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",129," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",115,116,56,"
+                    data-price="350" data-ispackage="true"></a>￥350
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",130," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",115,116,56,"
+                    data-price="455" data-ispackage="true"></a>￥455
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",131," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",115,116,56,"
+                    data-price="686" data-ispackage="true"></a>￥686
+          
+        </td>
+          
+ 
+        
+        <td>
+        
+        
+           <a href="/teacher_info_20.html">
+            郭福珍</a>
+            </td>
+        </tr>
+  
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="101"><span
+                
+                >
+                    注会《财务成本管理》</span>
+               
+            </a>
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",101," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",101,"
+                    data-price="245" data-ispackage="false"></a>￥245
+                
+        </td>
+        
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",119," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",119,"
+                    data-price="105" data-ispackage="false"></a>￥105
+                
+        </td>
+        <td>
+          
+                <a class="checkbox unchecked" data-productid=",120," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",120,"
+                    data-price="70" data-ispackage="false"></a>￥70
+                
+                
+        </td>
+
+        
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",135," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",101,119,120,"
+                    data-price="350" data-ispackage="true"></a>￥350
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",136," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",101,119,120,"
+                    data-price="455" data-ispackage="true"></a>￥455
+          
+        </td>
+          
+               <td>
+          
+                <a class="checkbox unchecked" data-productid=",137," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="6" data-id=",101,119,120,"
+                    data-price="686" data-ispackage="true"></a>￥686
+          
+        </td>
+          
+ 
+        
+        <td>
+        
+        
+           <a href="/teacher_info_50.html">
+            罗淑贞</a>
+            </td>
+        </tr>
+  
+        </table></div></div>
+        
+                    
+
+ <div class="mev_table" name="tab9" data-type="nav" style="display:none">
+<table class="table_gu">
+								<tr class="tr1">
+									<td class="td1">课程名称</td>
+									<td>简介</td>
+									<td>课时</td>
+									<td>老师</td>
+									<td>价格</td>
+								</tr></table>
+<div class="name">
+<table id="tab9">
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="19"><span
+                onclick="javascript:window.location.href='/course_19_.html';"
+                >
+                    土地增值税实战解读</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_19_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            14小时26分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_41.html">
+            张冬芹</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",19," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="9" data-id=",19,"
+                    data-price="600" data-ispackage="false"></a>￥600
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="21"><span
+                onclick="javascript:window.location.href='/course_21_.html';"
+                >
+                    企业所得税汇算清缴实战剖析</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_21_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            10小时58分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_41.html">
+            张冬芹</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",21," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="9" data-id=",21,"
+                    data-price="600" data-ispackage="false"></a>￥600
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="10"><span
+                onclick="javascript:window.location.href='/course_10_.html';"
+                >
+                    企业增值税避税技巧案例解读</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_10_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时29分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_43.html">
+            凌世寿</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",10," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="9" data-id=",10,"
+                    data-price="500" data-ispackage="false"></a>￥500
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="45"><span
+                onclick="javascript:window.location.href='/course_45_.html';"
+                >
+                    最新会计准则案例解读</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_45_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时46分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_41.html">
+            张冬芹</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",45," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="9" data-id=",45,"
+                    data-price="180" data-ispackage="false"></a>￥180
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="11"><span
+                onclick="javascript:window.location.href='/course_11_.html';"
+                >
+                    营业税改增值税实战解析</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_11_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时26分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_41.html">
+            张冬芹</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",11," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="9" data-id=",11,"
+                    data-price="150" data-ispackage="false"></a>￥150
+            
+        </td>
+    </tr>
+    
+            <tr>
+								 <td class="td1">
+            <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="90"><span
+                onclick="javascript:window.location.href='/course-package_90_.html';"
+                >
+                    新会计政策与税务法规全程实操班</span>
+                
+            </a>
+        </td>
+								<td colspan="3">涵盖上述5大课程</td>
+								<td> <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="9"
+                    data-productid=",90," data-id=",10,11,19,21,45,"
+                    data-price="1800" data-ispackage="true" data-checked2="false"></a>￥1800</td>
+							</tr>
+            
+</table></div></div>
+
+
+ <div class="mev_table" name="tab10" data-type="nav" style="display:none">
+<table class="table_gu">
+								<tr class="tr1">
+									<td class="td1">课程名称</td>
+									<td>简介</td>
+									<td>课时</td>
+									<td>老师</td>
+									<td>价格</td>
+								</tr></table>
+<div class="name">
+<table id="tab10">
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="31"><span
+                onclick="javascript:window.location.href='/course_31_.html';"
+                >
+                    建筑施工会计专修班</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_31_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            09小时39分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_27.html">
+            张浩</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",31," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="10" data-id=",31,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="36"><span
+                onclick="javascript:window.location.href='/course_36_.html';"
+                >
+                    外贸会计专修班</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_36_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            05小时46分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_28.html">
+            陈芳</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",36," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="10" data-id=",36,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="42"><span
+                onclick="javascript:window.location.href='/course_42_.html';"
+                >
+                    房地产会计专修班</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_42_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            05小时47分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_29.html">
+            李咏侠</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",42," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="10" data-id=",42,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="266"><span
+                onclick="javascript:window.location.href='/course_266_.html';"
+                >
+                    工业成本会计专修班</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_266_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            14小时43分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_26.html">
+            何特嘉</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",266," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="10" data-id=",266,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+            <tr>
+								 <td class="td1">
+            <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="89"><span
+                onclick="javascript:window.location.href='/course-package_89_.html';"
+                >
+                    四大高薪行业晋级班</span>
+                
+            </a>
+        </td>
+								<td colspan="3">涵盖上述4大课程</td>
+								<td> <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="10"
+                    data-productid=",89," data-id=",266,31,36,42,"
+                    data-price="980" data-ispackage="true" data-checked2="false"></a>￥980</td>
+							</tr>
+            
+</table></div></div>
+
+
+ <div class="mev_table" name="tab11" data-type="nav" style="display:none">
+<table class="table_gu">
+								<tr class="tr1">
+									<td class="td1">课程名称</td>
+									<td>简介</td>
+									<td>课时</td>
+									<td>老师</td>
+									<td>价格</td>
+								</tr></table>
+<div class="name">
+<table id="tab11">
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="24"><span
+                onclick="javascript:window.location.href='/course_24_.html';"
+                >
+                    全面预算管理与控制</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_24_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            02小时13分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_26.html">
+            何特嘉</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",24," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="11" data-id=",24,"
+                    data-price="800" data-ispackage="false"></a>￥800
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="26"><span
+                onclick="javascript:window.location.href='/course_26_.html';"
+                >
+                    多行业会计实战解读</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_26_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_25.html">
+            何小跃</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",26," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="11" data-id=",26,"
+                    data-price="800" data-ispackage="false"></a>￥800
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="44"><span
+                onclick="javascript:window.location.href='/course_44_.html';"
+                >
+                    企业税务筹划与合理避税</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_44_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            02小时57分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_25.html">
+            何小跃</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",44," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="11" data-id=",44,"
+                    data-price="800" data-ispackage="false"></a>￥800
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="67"><span
+                onclick="javascript:window.location.href='/course_67_.html';"
+                >
+                    财务报表阅读与分析</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_67_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            06小时30分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_26.html">
+            何特嘉</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",67," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="11" data-id=",67,"
+                    data-price="800" data-ispackage="false"></a>￥800
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="68"><span
+                onclick="javascript:window.location.href='/course_68_.html';"
+                >
+                    企业成本分析与控制</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_68_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            01小时56分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_32.html">
+            刘玲</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",68," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="11" data-id=",68,"
+                    data-price="800" data-ispackage="false"></a>￥800
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="69"><span
+                onclick="javascript:window.location.href='/course_69_.html';"
+                >
+                    内部控制与风险管理</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_69_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            02小时36分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_39.html">
+            刘春英</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",69," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="11" data-id=",69,"
+                    data-price="800" data-ispackage="false"></a>￥800
+            
+        </td>
+    </tr>
+    
+            <tr>
+								 <td class="td1">
+            <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="88"><span
+                onclick="javascript:window.location.href='/course-package_88_.html';"
+                >
+                    高级财务管理实战班</span>
+                
+            </a>
+        </td>
+								<td colspan="3">涵盖上述6大课程</td>
+								<td> <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="11"
+                    data-productid=",88," data-id=",24,26,44,67,68,69,"
+                    data-price="2800" data-ispackage="true" data-checked2="false"></a>￥2800</td>
+							</tr>
+            
+</table></div></div>
+
+
+ <div class="mev_table" name="tab12" data-type="nav" style="display:none">
+<table class="table_gu">
+								<tr class="tr1">
+									<td class="td1">课程名称</td>
+									<td>简介</td>
+									<td>课时</td>
+									<td>老师</td>
+									<td>价格</td>
+								</tr></table>
+<div class="name">
+<table id="tab12">
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="186"><span
+                onclick="javascript:window.location.href='/course_186_.html';"
+                >
+                    全财务与ERP应用双赢</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_186_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时19分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_45.html">
+            康军祥</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",186," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",186,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="187"><span
+                onclick="javascript:window.location.href='/course_187_.html';"
+                >
+                    全财务与供应链系统双赢</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_187_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时24分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_45.html">
+            康军祥</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",187," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",187,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="188"><span
+                onclick="javascript:window.location.href='/course_188_.html';"
+                >
+                    全财务的完整体系与重点实操</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_188_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时20分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_45.html">
+            康军祥</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",188," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",188,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="190"><span
+                onclick="javascript:window.location.href='/course_190_.html';"
+                >
+                    费用与成本管理实战</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_190_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时50分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_45.html">
+            康军祥</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",190," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",190,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="191"><span
+                onclick="javascript:window.location.href='/course_191_.html';"
+                >
+                    财务预算编制与管理实战</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_191_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时21分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_45.html">
+            康军祥</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",191," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",191,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="192"><span
+                onclick="javascript:window.location.href='/course_192_.html';"
+                >
+                    资产安全与创收实战</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_192_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            03小时22分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_45.html">
+            康军祥</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",192," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",192,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="193"><span
+                onclick="javascript:window.location.href='/course_193_.html';"
+                >
+                    最新会计准则案例解读</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_193_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            02小时58分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_41.html">
+            张冬芹</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",193," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",193,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="194"><span
+                onclick="javascript:window.location.href='/course_194_.html';"
+                >
+                    营业税改增值税实战解析</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_194_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            02小时46分钟
+        </td>
+        <td class="td2">
+        
+           <a href="/teacher_info_41.html">
+            张冬芹</a>
+            
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",194," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="12" data-id=",194,"
+                    data-price="300" data-ispackage="false"></a>￥300
+            
+        </td>
+    </tr>
+    
+            <tr>
+								 <td class="td1">
+            <a href="javascript:void(0);">
+                <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="66"><span
+                onclick="javascript:window.location.href='/course-package_66_.html';"
+                >
+                    财务主管升职加薪班</span>
+                
+            </a>
+        </td>
+								<td colspan="3">涵盖上述8大课程</td>
+								<td> <a class="checkbox unchecked" data-val="checkbox" data-checked="false" data-type="12"
+                    data-productid=",66," data-id=",186,187,188,190,191,192,193,194,"
+                    data-price="1800" data-ispackage="true" data-checked2="false"></a>￥1800</td>
+							</tr>
+            
+</table></div></div>
+
+
+ <div class="mev_table" name="tab56" data-type="nav" style="display:none">
+<table class="table_gu">
+								<tr class="tr1">
+									<td class="td1">课程名称</td>
+									<td>简介</td>
+									<td>课时</td>
+									<td>老师</td>
+									<td>价格</td>
+								</tr></table>
+<div class="name">
+<table id="tab56">
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="276"><span
+                onclick="javascript:window.location.href='/course_276_.html';"
+                >
+                    房地产开发企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_276_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            01小时02分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",276," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",276,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="277"><span
+                onclick="javascript:window.location.href='/course_277_.html';"
+                >
+                    工业企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_277_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            57分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",277," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",277,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="279"><span
+                onclick="javascript:window.location.href='/course_279_.html';"
+                >
+                    服务业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_279_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            33分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",279," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",279,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="280"><span
+                onclick="javascript:window.location.href='/course_280_.html';"
+                >
+                    广告公司会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_280_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            29分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",280," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",280,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="281"><span
+                onclick="javascript:window.location.href='/course_281_.html';"
+                >
+                    酒店餐饮企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_281_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            01小时
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",281," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",281,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="282"><span
+                onclick="javascript:window.location.href='/course_282_.html';"
+                >
+                    建筑施工企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_282_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            49分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",282," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",282,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="283"><span
+                onclick="javascript:window.location.href='/course_283_.html';"
+                >
+                    旅游公司会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_283_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            52分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",283," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",283,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="284"><span
+                onclick="javascript:window.location.href='/course_284_.html';"
+                >
+                    外贸企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_284_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            57分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",284," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",284,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="285"><span
+                onclick="javascript:window.location.href='/course_285_.html';"
+                >
+                    商业企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_285_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            45分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",285," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",285,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="286"><span
+                onclick="javascript:window.location.href='/course_286_.html';"
+                >
+                    物流运输企业会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_286_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            57分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",286," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",286,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="td1">
+            <a href="javascript:void(0);">
+              <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="287"><span
+                onclick="javascript:window.location.href='/course_287_.html';"
+                >
+                    装修装饰公司会计真账实训（教材+光盘）</span>  
+               
+                
+            </a>
+        </td>
+        <td class="td2" style="cursor:pointer">
+            <a href="/course_287_.html">
+            详情</a>
+        </td>
+        <td class="td3">
+            48分钟
+        </td>
+        <td class="td2">
+        
+        </td>
+        <td class="td3">
+        
+              <a class="checkbox unchecked" data-productid=",287," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="56" data-id=",287,"
+                    data-price="298" data-ispackage="false"></a>￥298
+            
+        </td>
+    </tr>
+    
+</table></div></div>
+
+                     
+<div class="table_04" name="tab40" data-type="nav" style="display: none">
+   <table class="table_gu">
+							<tr class="tr1">
+								<td class="td1">课程名称</td>
+								<td><p>精讲班</p></td>
+								<td><p>习题班</p></td>
+								<td><p>串讲押题班</p></td>
+								<td>价格<br>(元/科)</td>
+								<td>主讲老师</td>
+							</tr>
+						</table>
+                        <div class="name">
+    <table id="tab40">
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="209">
+                    证券从业《证券交易》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",231," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",231,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",232," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",232,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",233," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",233,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",209," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",231,232,233,"
+                    data-price="196" data-ispackage="true"></a>￥196
+            </td>
+            <td>
+                王心如
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="211">
+                    证券从业《证券投资分析》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",237," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",237,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",238," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",238,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",239," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",239,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",211," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",237,238,239,"
+                    data-price="196" data-ispackage="true"></a>￥196
+            </td>
+            <td>
+                白崭
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="207">
+                    证券从业《证券投资基金》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",224," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",224,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",225," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",225,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",227," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",227,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",207," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",224,225,227,"
+                    data-price="196" data-ispackage="true"></a>￥196
+            </td>
+            <td>
+                林青
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="208">
+                    证券从业《证券市场基础知识》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",228," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",228,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",229," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",229,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",230," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",230,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",208," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",228,229,230,"
+                    data-price="196" data-ispackage="true"></a>￥196
+            </td>
+            <td>
+                姚勇
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="210">
+                    证券从业《证券发行与承销》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",234," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",234,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",235," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",235,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",236," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",236,"
+                    data-price="65.33" data-ispackage="false"></a>￥65.33
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",210," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",234,235,236,"
+                    data-price="196" data-ispackage="true"></a>￥196
+            </td>
+            <td>
+                邓永平
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                证券市场基础知识+证券交易
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",240," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",228,229,230,231,232,233,"
+                    data-price="315" data-ispackage="true"></a>￥315
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                证券市场基础知识+证券发行与承销
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",241," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",228,229,230,234,235,236,"
+                    data-price="315" data-ispackage="true"></a>￥315
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                证券市场基础知识+证券投资分析
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",242," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",228,229,230,237,238,239,"
+                    data-price="315" data-ispackage="true"></a>￥315
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                证券市场基础知识+证券投资基金
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",243," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="40" data-id=",224,225,227,228,229,230,"
+                    data-price="315" data-ispackage="true"></a>￥315
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+    </table></div>
+</div>
+
+<div class="table_04" name="tab41" data-type="nav" style="display: none">
+   <table class="table_gu">
+							<tr class="tr1">
+								<td class="td1">课程名称</td>
+								<td><p>精讲班</p></td>
+								<td><p>习题班</p></td>
+								<td><p>串讲押题班</p></td>
+								<td>价格<br>(元/科)</td>
+								<td>主讲老师</td>
+							</tr>
+						</table>
+                        <div class="name">
+    <table id="tab41">
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="202">
+                    银行从业《银行业法律法规与综合能力》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",244," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",244,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",245," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",245,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",246," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",246,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",202," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",244,245,246,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                曾卉
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="203">
+                    银行从业《个人贷款》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",247," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",247,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",248," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",248,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",249," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",249,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",203," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",247,248,249,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                吴娜
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="204">
+                    银行从业《公司信贷》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",250," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",250,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",251," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",251,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",252," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",252,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",204," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",250,251,252,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                李江海
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="205">
+                    银行从业《个人理财》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",253," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",253,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",254," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",254,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",255," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",255,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",205," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",253,254,255,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                张曦
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="206">
+                    银行从业《风险管理》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",256," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",256,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",257," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",257,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",258," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",258,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",206," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",256,257,258,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                高泽金
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                银行业法律法规与综合能力+个人理财
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",259," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",244,245,246,253,254,255,"
+                    data-price="420" data-ispackage="true"></a>￥420
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                银行业法律法规与综合能力+风险管理
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",260," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",244,245,246,256,257,258,"
+                    data-price="420" data-ispackage="true"></a>￥420
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                银行业法律法规与综合能力+个人贷款
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",261," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",244,245,246,247,248,249,"
+                    data-price="420" data-ispackage="true"></a>￥420
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                银行业法律法规与综合能力+公司信贷
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",262," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="41" data-id=",244,245,246,250,251,252,"
+                    data-price="420" data-ispackage="true"></a>￥420
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+    </table></div>
+</div>
+
+<div class="table_04" name="tab42" data-type="nav" style="display: none">
+   <table class="table_gu">
+							<tr class="tr1">
+								<td class="td1">课程名称</td>
+								<td><p>精讲班</p></td>
+								<td><p>习题班</p></td>
+								<td><p>串讲押题班</p></td>
+								<td>价格<br>(元/科)</td>
+								<td>主讲老师</td>
+							</tr>
+						</table>
+                        <div class="name">
+    <table id="tab42">
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="201">
+                    中级经济师《经济基础知识》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",263," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",263,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",264," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",264,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",265," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",265,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",201," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",263,264,265,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                诸智武
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="javascript:void(0);">
+                    <img src="/images/duce_02.png" title="免费试听" data-type="tyePlayer" data-productid="274">
+                    中级经济师《财政税收专业知识与实务》
+                </a>
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",269," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",269,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",270," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",270,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td style="display: none">
+                <a class="checkbox unchecked" data-productid=",271," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",271,"
+                    data-price="84" data-ispackage="false"></a>￥84
+            </td>
+            
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                √
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",274," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",269,270,271,"
+                    data-price="252" data-ispackage="true"></a>￥252
+            </td>
+            <td>
+                陈汉芳
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="td1">
+                <a href="#">套餐价</a>
+            </td>
+            <td colspan="3">
+                经济基础知识+财政税收专业知识与实务
+            </td>
+            <td>
+                <a class="checkbox unchecked" data-productid=",275," data-checked="false"
+                    data-checked2="false" data-val="checkbox" data-type="42" data-id=",263,264,265,269,270,271,"
+                    data-price="420" data-ispackage="true"></a>￥420
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+    </table></div>
+</div>
+
+                    <div class="gundong_bg">
+                        <div class="gundong">
+                        </div>
+                    </div>
+                    <div class="class_bottom">
+                        <div class="class_bottom_L">
+                            <div class="zx">
+                                <div class="nb">
+                                    课程咨询：</div>
+                                <a href="tel:400-871-7707" title="400-871-7707">400-871-7707</a></div>
+                        </div>
+                        <input id="allPrice" type="hidden" value="" /><input id="productChildIds" type="hidden"
+                            value="" />
+                        <div class="ban">
+                            <a href="/faq/problems.html" target="_blank">*了解班型特点</a></div>
+                        <p>
+                            <a href="javascript:void(0);">确认，去交费</a></p>
+                        <span>总计：￥<b id="txtPrice">0</b>元</span>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+
+            </div>
+        </div>
+            
+       <div class="clear"></div>
+    </div>
+        
+    </div>
+
+        
+<div class="footer">
+    <div class="footer_L">
+        <p>
+            <a href="http://www.kjcity.com/" target="_blank">会计城</a><span class="sep">|</span><a
+                href="http://wangxiao.kjcity.com/" target="_blank">网校</a><span class="sep">|</span>
+            <a href="/sso.aspx?t=2" target="_blank">题库</a><span class="sep">|</span><a href="/sso.aspx?t=3"
+                target="_blank">资讯</a><span class="sep">|</span> <a href="/sso.aspx?t=5" target="_blank">社区</a>
+            <span class="sep">|</span> <a href="http://baike.kjcity.com/" target="_blank">百科</a>
+        </p>
+        <p>
+            会计城 Copyright ©2014 ALL Rights Reserved 备案号：<a href="http://www.miitbeian.gov.cn/"
+                target="_blank">沪ICP备14041383号-2</a>
+        </p>
+    </div>
+    <div class="footer_R">
+        <p>
+            <a href="/images/CPS联盟合作手册.rar">商务合作</a><span class="sep">|</span> <a href="javascript:">
+                诚聘英才</a><span class="sep">|</span> <a href="/sitemap.html">网站地图</a><span class="sep">|</span>
+            <a href="javascript:">意见反馈</a>
+        </p>
+        <div class="logo">
+            <a class="jy" href="http://www.hengqijy.com/" target="_blank"></a><a class="kjc"
+                href="http://wangxiao.kjcity.com/"></a><a class="ql" href="javascript:">
+                </a>
+        </div>
+    </div>
+    <div style="display: none">
+        <script type="text/javascript">            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1253015962'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1253015962' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F44826ecfc6d792ba89c40f790acfca5a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+    </div>
+</div>
+<div class="sideBar" >
+	
+		<ul class="sidees">
+    <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=800024767&site=qq&menu=yes">
+        <img src="/images/sideBar_00.png"><span>咨询</span></a></li>
+    <li><a href="/shopping.html">
+        <img src="/images/sideBar_01.png" /><span>购物车</span></a></li>
+    <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=800024767&site=qq&menu=yes">
+        <img src="/images/sideBar_02.gif" /><span>在线客服</span></a></li>
+    <li id="liWX"><a href="javascript:void(0);">
+        <img src="/images/weixi_index.png"><span>微信咨询</span><div class="kjc" id="imgWX" style="display: none">
+            <img src="/images/kjcity.jpg" /></div>
+    </a></li>
+    <li><a href="http://www.wenjuan.com/s/Az6ZJn/" target="_blank">
+        <img src="/images/sideBar_03.png"><span>有奖调查</span></a></li>
+    <li><a href="http://jq.qq.com/?_wv=1027&k=eIyDXs" target="_blank">
+        <img src="/images/sideBar_QQ.png"><span>会计城俱乐部</span></a></li>
+    <li><a href="javascript:">
+        <img src="/images/sideBar_400.png"><span>400<br>
+            871-7707</span></a></li>
+    <li><a href="#">
+        <img src="/images/sideBar_04.png" /><span>返回顶部</span></a></li>
+</ul>
+<div class="down">
+			<p class="shut"></p>
+		</div>
+</div>
+<script type="text/javascript" src="/SchJS/ywx1.js"></script>
+<script type="text/javascript" src="/SchJS/sideBar.js"></script>
+
+    </div>
+     
+    <div class="playback" id="dvTest" style="display: none;">
+        <div class="playback_img" id="playback_img">
+        </div>
+        <div class="playback_top">
+            <div class="truc">
+                <img src="/images/tructor_05.png"></div>
+            <a href="javascript:void(0);" id="btnClose">
+                <img src="/images/details.png"></a>
+            <div class="play_tm_L">
+                <p>
+                    <span></span>
+                </p>
+            </div>
+            <div class="play_tm_R">
+                <p>
+                </p>
+                <del></del><span><a href="javascript:void(0);">购买课程</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 激活课程卡 -->
+	<div id="details1" style=" display:none; width: 650px;">
+		<div class="details_bottom">
+			<div class="details_nr">
+				<div class="delivery_Cf" style="margin-top:30px">
+					<p>课程卡号：</p>
+					<input id="code" type="text"name="name" value="">
+				</div>
+				<div class="delivery_Df">
+					<p>课程卡密码：</p>
+					<input id="coupass" type="text"name="name" value="">
+				</div>
+				<ul class="delivery_Ef" style="margin:30px 0 0 165px">
+					<li class="action"><a href="javascript:" id="addLearnCourse">激活</a></li>
+					
+				</ul>
+                <div id="loading1" class="delivery_Ef" style="font-size: 13px;">
+                        </div>
+			</div>
+		</div>
+	</div>
+
+    </form>
+</body>
+</html>
