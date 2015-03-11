@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -33,6 +34,7 @@ namespace wangxiao.kjcity.main
         static List<Course> CourseList = new List<Course>();
         public Main()
         {
+
             IE_TEMP_DIR = FrameworkConfig.GetAppSetting("ietempdir");
             Control.CheckForIllegalCrossThreadCalls = false;
             this.ShowInTaskbar = true;
@@ -43,6 +45,8 @@ namespace wangxiao.kjcity.main
         {
             ThreadStart ts = new ThreadStart(delegate()
             {
+               
+
                 labelMsg.Text = "登录中.....";
                 Dictionary<string, string> dic = new Dictionary<string, string>();
                 dic.Add("type", "1");
@@ -79,6 +83,7 @@ namespace wangxiao.kjcity.main
                 labelMsg.Text = "退出中.....";
                 string content = HttpUtility.SendGet(OUT_LOGIN, null, null, null, cookies);
                 cookies = null;
+                CourseList = new List<Course>();
                 listBoxLeft.Items.Clear();
                 listBoxRight.Items.Clear();
                 labelMsg.Text = "";
@@ -96,11 +101,8 @@ namespace wangxiao.kjcity.main
             td.Start();
         }
 
-
-
         private void btnPlayer_Click(object sender, EventArgs e)
         {
-            IECache.IECacheClear();
             // System.Diagnostics.Process.Start("iexplore.exe", "http://p.bokecc.com/playvideo.bo?uid=FE7A65E6BE2EA539&playerid=CED4B0511C5D4992&playertype=1&autoStart=true&vid=5D906F941F40DFB59C33DC5901307461");
             string name = listBoxRight.Text;
             if (string.IsNullOrWhiteSpace(name))
@@ -114,57 +116,75 @@ namespace wangxiao.kjcity.main
                 MessageBox.Show("选择的视频不能播放");
                 return;
             }
+            IECache.IECacheClear();
             System.Diagnostics.Process.Start("iexplore.exe", arr[0]);
 
         }
 
         private void btnMove_Click(object sender, EventArgs e)
         {
-            string cname = listBoxLeft.Text;
-            if (string.IsNullOrWhiteSpace(cname))
-            {
-                MessageBox.Show("无要选择移动的视频");
-                return;
-            }
-            var course = CourseList.Where(m => m.Name == cname).FirstOrDefault();
-            if (course != null)
-            {
-                string text = listBoxRight.Text;
-                string[] arr = text.Split('@');
-                if (arr.Length < 3)
-                {
-                    MessageBox.Show("移动失败");
-                    return;
-                }
-                string path = BIN_DIR + cname + "/" + arr[2] + "/";//保存目录
-                string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.InternetCache);
-                DirectoryInfo dir = new DirectoryInfo(dirPath);
-                FileInfo[] files = dir.GetFiles("*.flv", SearchOption.AllDirectories);
-                int i = 0;
-                foreach (FileInfo file in files)//遍历所有的文件夹 显示.flv的文件
-                {
-                    try
-                    {
-                        string fileName = file.FullName;
-                        string ext = file.Extension;
-                        File.Move(fileName, path + arr[1] + ext);
-                    }
-                    catch (Exception msg)//异常处理
-                    {
-                        MessageBox.Show(msg.Message);
-                    }
-                    i++;
-                }
-
-                MessageBox.Show("移动成功！");
-                System.Diagnostics.Process.Start("explorer.exe", path);
-            }
-
-
+            ThreadStart ts = new ThreadStart(MoveVideo);
+            Thread td = new Thread(ts);
+            td.Start();
         }
 
 
+
         #region == 公用方法
+        private void MoveVideo()
+        {
+
+            string cname = listBoxLeft.Text;
+            if (string.IsNullOrWhiteSpace(cname))
+            {
+                MessageBox.Show("未选择移动的视频");
+                return;
+            }
+            var course = CourseList.Where(m => m.Name == cname).FirstOrDefault();
+            if (course == null)
+            {
+                MessageBox.Show("课程获取失败");
+                return;
+            }
+            string text = listBoxRight.Text;
+            string[] arr = text.Split('@');
+            if (arr.Length < 3)
+            {
+                MessageBox.Show("移动失败");
+                return;
+            }
+            string path = BIN_DIR + cname + "/" + arr[2] + "/";//保存目录
+            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.InternetCache);
+            DirectoryInfo dir = new DirectoryInfo(dirPath);
+            FileInfo[] files = dir.GetFiles("*.flv", SearchOption.AllDirectories);
+            int i = 0;
+            string fileToSelect = string.Empty;
+            foreach (FileInfo file in files)//遍历所有的文件夹 显示.flv的文件
+            {
+                try
+                {
+                    string fileName = file.FullName;
+                    string ext = file.Extension;
+                    fileToSelect = path + arr[1] + ext;
+                    File.Move(fileName, path + arr[1] + ext);
+                }
+                catch (Exception msg)//异常处理
+                {
+                    MessageBox.Show(msg.Message);
+                    return;
+                }
+                i++;
+            }
+            if (files.Count() == 0)
+            {
+                MessageBox.Show("未匹配到视频文件");
+                return;
+            }
+
+            IExplorerExt.QuitIExplorerByLocationURL(arr[0]);
+            System.Diagnostics.Process.Start(path);
+
+        }
         private void LoadChapter()
         {
             labelMsg.Text = "章节获取中.....";

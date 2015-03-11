@@ -37,3 +37,4 @@ F:\mygit\zhaopin\wangxiao.kjcity.com\wangxiao.kjcity.com\bin\Debug\zh-Hans\Syste
 F:\mygit\zhaopin\wangxiao.kjcity.com\wangxiao.kjcity.com\bin\Debug\zh-Hans\System.Net.Http.resources.dll
 F:\mygit\zhaopin\wangxiao.kjcity.com\wangxiao.kjcity.com\obj\Debug\wangxiao.kjcity.com.exe
 F:\mygit\zhaopin\wangxiao.kjcity.com\wangxiao.kjcity.com\obj\Debug\wangxiao.kjcity.com.pdb
+F:\mygit\zhaopin\wangxiao.kjcity.com\wangxiao.kjcity.com\obj\Debug\wangxiao.kjcity.com.csprojResolveAssemblyReference.cache

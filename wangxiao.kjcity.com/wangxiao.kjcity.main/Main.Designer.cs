@@ -55,7 +55,7 @@
             this.groupBox1.Size = new System.Drawing.Size(903, 82);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "步骤一";
+            this.groupBox1.Text = "相关操作";
             // 
             // btnPlayer
             // 
