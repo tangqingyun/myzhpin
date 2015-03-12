@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Course xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>2015旧大纲会计基础-习题班</Name>
+  <Address>http://wangxiao.kjcity.com//UserManage/chapters_play_2__.html</Address>
+  <ChapterList>
+    <Chapter>
+      <Name>第一章总论</Name>
+      <Lessons>
+        <Lesson>
+          <LessonName>课时1总论01</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_569_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=E8DBAF9668B9141D9C33DC5901307461</RealAdr>
+        </Lesson>
+        <Lesson>
+          <LessonName>课时2总论02</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_572_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=B11D55EF322946EF9C33DC5901307461</RealAdr>
+        </Lesson>
+      </Lessons>
+    </Chapter>
+    <Chapter>
+      <Name>第二章会计要素与会计科目</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第三章会计等式和复式记账</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第四章会计凭证论</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第五章会计账簿</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第六章账务处理程序</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第七章财产清查</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第八章财务会计报告</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第九章会计档案</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>第十章主要经济业务的会计核算方法</Name>
+      <Lessons>
+        <Lesson>
+          <LessonName>课时101款项和有价证劵的收付</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_592_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=FC04C75A8E81DFA59C33DC5901307461</RealAdr>
+        </Lesson>
+        <Lesson>
+          <LessonName>课时202财产物资的收发、增减和使用</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_596_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=48C57F68AEFB5DE99C33DC5901307461</RealAdr>
+        </Lesson>
+        <Lesson>
+          <LessonName>课时303债权、债务的发生和结算</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_597_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=726B37CCC2FF514A9C33DC5901307461</RealAdr>
+        </Lesson>
+        <Lesson>
+          <LessonName>课时404资本的核算</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_600_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=9C3720C76421483C9C33DC5901307461</RealAdr>
+        </Lesson>
+        <Lesson>
+          <LessonName>课时505收入、成本和费用的核算</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_603_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=0BEC6EB626B9738C9C33DC5901307461</RealAdr>
+        </Lesson>
+        <Lesson>
+          <LessonName>课时606财务成果的核算</LessonName>
+          <LessonAdr>http://wangxiao.kjcity.com//usermanage/chapters_play_2_605_.html</LessonAdr>
+          <RealAdr>http://p.bokecc.com/playvideo.bo?playerid=CED4B0511C5D4992&amp;playertype=1&amp;autoStart=true&amp;vid=8D8FFBA4557442D29C33DC5901307461</RealAdr>
+        </Lesson>
+      </Lessons>
+    </Chapter>
+  </ChapterList>
+</Course>

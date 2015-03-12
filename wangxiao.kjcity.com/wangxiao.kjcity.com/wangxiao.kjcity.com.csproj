@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Configs\Database.config" />
-    <None Include="Configs\Framework.config" />
+    <None Include="Configs\Framework.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Configs\Log4Net.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

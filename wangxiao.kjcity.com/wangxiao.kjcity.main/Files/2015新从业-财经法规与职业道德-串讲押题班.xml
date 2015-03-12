@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Course xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>2015新从业-财经法规与职业道德-串讲押题班</Name>
+  <Address>http://wangxiao.kjcity.com//UserManage/chapters_play_106__.html</Address>
+  <ChapterList>
+    <Chapter>
+      <Name>2014年新大纲全国版《财经法规与职业道德》押题班01</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《财经法规与职业道德》押题班02</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《财经法规与职业道德》押题班03</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《财经法规与职业道德》押题班04</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《财经法规与职业道德》押题班05</Name>
+      <Lessons />
+    </Chapter>
+  </ChapterList>
+</Course>

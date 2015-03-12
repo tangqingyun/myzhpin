@@ -17,6 +17,7 @@ using Basement.Framework.IExplorer;
 using Basement.Framework.IO;
 using Basement.Framework.Net;
 using Basement.Framework.Utility;
+using Basement.Framework.Xml;
 using HtmlAgilityPack;
 
 namespace wangxiao.kjcity.main
@@ -32,20 +33,36 @@ namespace wangxiao.kjcity.main
         private string IE_TEMP_DIR = string.Empty;
         static CookieCollection cookies;
         static List<Course> CourseList = new List<Course>();
+        static Course CurrentCourse = null;
+        System.Timers.Timer timers = null;
+        static List<Lesson> KeChengList = new List<Lesson>();
+        string IsLogin = FrameworkConfig.GetAppSetting("islogin");
+
         public Main()
         {
+            InitializeComponent();
 
-            IE_TEMP_DIR = FrameworkConfig.GetAppSetting("ietempdir");
             Control.CheckForIllegalCrossThreadCalls = false;
             this.ShowInTaskbar = true;
-            InitializeComponent();
+            btnPlayer.Enabled = btnMove.Enabled = false;
+            if (IsLogin == "0")
+            {
+                btnLogin.Text = "获取课程";
+                btmOutLogin.Enabled = false;
+            }
+            else
+                btnLogin.Text = "登 录";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             ThreadStart ts = new ThreadStart(delegate()
             {
-               
+                if (IsLogin == "0")
+                {
+                    GetMyCourse();
+                    return;
+                }
 
                 labelMsg.Text = "登录中.....";
                 Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -103,7 +120,6 @@ namespace wangxiao.kjcity.main
 
         private void btnPlayer_Click(object sender, EventArgs e)
         {
-            // System.Diagnostics.Process.Start("iexplore.exe", "http://p.bokecc.com/playvideo.bo?uid=FE7A65E6BE2EA539&playerid=CED4B0511C5D4992&playertype=1&autoStart=true&vid=5D906F941F40DFB59C33DC5901307461");
             string name = listBoxRight.Text;
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -118,7 +134,6 @@ namespace wangxiao.kjcity.main
             }
             IECache.IECacheClear();
             System.Diagnostics.Process.Start("iexplore.exe", arr[0]);
-
         }
 
         private void btnMove_Click(object sender, EventArgs e)
@@ -128,9 +143,119 @@ namespace wangxiao.kjcity.main
             td.Start();
         }
 
+        private void btnExcute_Click(object sender, EventArgs e)
+        {
+            if (CurrentCourse == null)
+            {
+                MessageBox.Show("请选择课程");
+                return;
+            }
 
+            if (CurrentCourse.ChapterList == null || CurrentCourse.ChapterList.Count() == 0)
+            {
+                MessageBox.Show("课程无章节");
+                return;
+            }
+            btnLogin.Enabled = false;
+            btnChapter.Enabled = false;
+            btnPlayer.Enabled = false;
+            btnMove.Enabled = false;
+            btnExcute.Enabled = false;
+            btmOutLogin.Enabled = false;
+            btnExcute.Enabled = false;
+            listBoxLeft.Enabled = false;
+            listBoxRight.Enabled = false;
+
+            ThreadStart ts = new ThreadStart(ExecuteMoveFlv);
+            Thread td = new Thread(ts);
+            td.Start();
+
+        }
 
         #region == 公用方法
+
+        /// <summary>
+        /// 执行flv文件移动
+        /// </summary>
+        private void ExecuteMoveFlv()
+        {
+            Lesson keshi = KeChengList.Where(m => m.MoveComplete == false).OrderBy(m => m.Id).FirstOrDefault();
+            if (keshi == null) {
+                return;
+            }
+            for (int i = 0; i < listBoxRight.Items.Count; i++)
+            {
+                if (listBoxRight.Items[i].ToString().Contains(keshi.RealAdr))
+                {
+                    listBoxRight.SelectedItem = listBoxRight.Items[i];
+                    break;
+                }
+            }
+            bool isbol = IExplorerExt.HasExistIExplorerByUrl(keshi.RealAdr);
+            if (!isbol)
+            {
+                string text = listBoxRight.Text;
+                string flvfile = "";
+                if (!string.IsNullOrWhiteSpace(text))
+                {
+                    flvfile = BIN_DIR + CurrentCourse.Name + "/" + text.Split('@')[2] + "/" + keshi.LessonName + ".flv";
+                }
+
+                if (!File.Exists(flvfile))
+                {
+                    IECache.IECacheClear(); //清空浏览器缓存_打开视频
+                    Process prs = System.Diagnostics.Process.Start("iexplore.exe", keshi.RealAdr);
+                    //开启计时器移动缓存下载的flv文件
+                    timers = new System.Timers.Timer(Convert.ToInt32(FrameworkConfig.GetAppSetting("timer")) * 1000);
+                    timers.Elapsed += delegate { MoveVideoFlvFile(keshi); };
+                    timers.Enabled = true;
+                }
+                else
+                {
+                    keshi.MoveComplete = true;
+                    ExecuteMoveFlv();
+                }
+
+            }
+
+        }
+
+        private void MoveVideoFlvFile(Lesson lession)
+        {
+            string text = listBoxRight.Text;
+            string[] arr = text.Split('@');
+            string path = BIN_DIR + CurrentCourse.Name + "/" + arr[2] + "/";//保存目录
+            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.InternetCache);
+            DirectoryInfo dir = new DirectoryInfo(dirPath);
+            FileInfo[] files = dir.GetFiles("*.flv", SearchOption.AllDirectories);
+            int i = 0;
+            string fileToSelect = string.Empty;
+            foreach (FileInfo file in files)//遍历所有的文件夹 显示.flv的文件
+            {
+                try
+                {
+                    string fileName = file.FullName;
+                    string ext = file.Extension;
+                    fileToSelect = path + arr[1] + ext;
+                    if (!File.Exists(path + arr[1] + ext))
+                    {
+                        File.Move(fileName, path + arr[1] + ext);
+                    }
+                    lession.MoveComplete = true;
+                    IExplorerExt.QuitIExplorerByLocationURL(arr[0]);
+                    FileExtension.WriteText(BIN_DIR + CurrentCourse.Name + "/log.txt", text + "\r\n", Encoding.UTF8, true);
+                    ExecuteMoveFlv();//移动完成后继续执行相同操作
+                }
+                catch (Exception)//异常处理
+                {
+                    return;
+                }
+                i++;
+            }
+
+        }
+
+
         private void MoveVideo()
         {
 
@@ -187,41 +312,24 @@ namespace wangxiao.kjcity.main
         }
         private void LoadChapter()
         {
-            labelMsg.Text = "章节获取中.....";
-            listBoxRight.Items.Clear();
-            if (cookies == null || cookies.Count == 0)
-            {
-                MessageBox.Show("请先登录");
-                return;
-            }
             string courseName = listBoxLeft.Text;
             if (string.IsNullOrWhiteSpace(courseName))
             {
-                MessageBox.Show("请选择课程");
+                ShowMessage("请选择课程");
                 return;
             }
-            var course = CourseList.Where(m => m.Name == courseName).SingleOrDefault();
-            if (course != null)
+            this.ShowMessage("章节获取中.....");
+            listBoxRight.Items.Clear();
+            string txtfile = ROOT_DIR + "Files/" + courseName + ".xml";
+            if (File.Exists(txtfile))//如果课程文件存在则从文件中读取
             {
-                GetChapterList(course.Address, course);
+                ShowLocalFileChapterList(txtfile);
             }
-            foreach (var itm in course.ChapterList)
+            else
             {
-                //创建章节目录文件夹
-                string chapter_dir = BIN_DIR + "" + courseName + "\\" + itm.Name;
-                if (!Directory.Exists(chapter_dir))
-                {
-                    Directory.CreateDirectory(chapter_dir);
-                }
-                listBoxRight.Items.Add(itm.Name);
-                Dictionary<string, string> dic = GetLessonAdr(itm.Lessons);
-                foreach (var nd in dic)
-                {
-                    listBoxRight.Items.Add(nd.Value + "@" + nd.Key + "@" + itm.Name);
-                }
-
+                ShowNewWorkChapterList(txtfile, courseName);
             }
-            labelMsg.Text = "";
+            this.ShowMessage();
         }
         private void GetMyCourse()
         {
@@ -254,7 +362,6 @@ namespace wangxiao.kjcity.main
 
             }
         }
-
         static void RemoveListBox(ListBox listbox)
         {
             for (int i = 0; i < listbox.Items.Count; i++)
@@ -263,12 +370,28 @@ namespace wangxiao.kjcity.main
 
             }
         }
-
-        static void GetChapterList(string url, Course model)
+        /// <summary>
+        /// 获取网站上的章节
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="course"></param>
+        private void ShowNewWorkChapterList(string txtfile, string courseName)
         {
-            string chapters_play_html = HttpUtility.SendGet(url, null, null, null, cookies);
+            if (cookies == null || cookies.Count == 0)
+            {
+                ShowMessage("请先登录");
+                return;
+            }
+            Course course = CourseList.Where(m => m.Name == courseName).SingleOrDefault();
+            CurrentCourse = course;
+            if (course == null)
+            {
+                ShowMessage("未获取到课程");
+                return;
+            }
+
+            string chapters_play_html = HttpUtility.SendGet(course.Address, null, null, null, cookies);
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-            //string html = FileExtension.ReadText(@"F:\mygit\zhaopin\wangxiao.kjcity.com\wangxiao.kjcity.com\chapters_play.html", Encoding.UTF8);
             doc.LoadHtml(chapters_play_html);
             HtmlNodeCollection dls = doc.DocumentNode.SelectNodes("//dl[@class='panel_Cf']");
             if (dls == null)
@@ -277,6 +400,7 @@ namespace wangxiao.kjcity.main
                 return;
             }
 
+            //抓取章节课时
             int i = 0;
             foreach (HtmlNode node in dls)
             {
@@ -293,13 +417,49 @@ namespace wangxiao.kjcity.main
                     {
                         string coltext = TrimStr(col.InnerText);
                         string href = DOMAIN + col.ChildNodes[1].Attributes["href"].Value;
-                        chapter.Lessons.Add(new Lesson { LessonName = coltext, LessonAdr = href });
+                        chapter.Lessons.Add(new Lesson { Id = i, LessonName = coltext, LessonAdr = href, MoveComplete = false, RealAdr = "" });
                     }
                 }
                 i++;
-                model.ChapterList.Add(chapter);
+                course.ChapterList.Add(chapter);
             }
 
+            foreach (Chapter itm in course.ChapterList)
+            {
+                KeChengList.AddRange(itm.Lessons);
+                //创建章节目录文件夹
+                string chapter_dir = BIN_DIR + "" + course.Name + "\\" + itm.Name;
+                if (!Directory.Exists(chapter_dir))
+                {
+                    Directory.CreateDirectory(chapter_dir);
+                }
+                listBoxRight.Items.Add(itm.Name);
+                foreach (var nd in itm.Lessons)
+                {
+                    string str = nd.GetLessonRealAdr(cookies) + "@" + nd.LessonName + "@" + itm.Name;
+                    listBoxRight.Items.Add(str);
+                }
+            }
+            XmlSerializer<Course>.SerializeToFile(txtfile, course);//将课程数据写入文件保存
+        }
+        /// <summary>
+        /// 从本地xml文件中读取课程数据
+        /// </summary>
+        /// <param name="fileName"></param>
+        private void ShowLocalFileChapterList(string fileName)
+        {
+            this.ShowMessage("文件读取中.....");
+            CurrentCourse = XmlSerializer<Course>.DeserializeFromFile(fileName);//从文件中读取课程数据
+            foreach (Chapter itm in CurrentCourse.ChapterList)
+            {
+                KeChengList.AddRange(itm.Lessons);
+                listBoxRight.Items.Add(itm.Name);
+                foreach (var nd in itm.Lessons)
+                {
+                    string str = nd.RealAdr + "@" + nd.LessonName + "@" + itm.Name;
+                    listBoxRight.Items.Add(str);
+                }
+            }
         }
 
         static Dictionary<string, string> GetLessonAdr(List<Lesson> lessonList)
@@ -315,16 +475,20 @@ namespace wangxiao.kjcity.main
                 string baseUrl;
                 NameValueCollection nvcolle;
                 StringHelper.ParseUrl(video_url, out baseUrl, out nvcolle);
-                dic.Add(itm.LessonName, string.Format(@"http://p.bokecc.com/playvideo.bo?playerid={0}&playertype=1&autoStart=true&vid={1}", nvcolle["playerid"], nvcolle["vid"]));
+                string realAdr = string.Format(@"http://p.bokecc.com/playvideo.bo?playerid={0}&playertype=1&autoStart=true&vid={1}", nvcolle["playerid"], nvcolle["vid"]);
+                dic.Add(itm.LessonName, realAdr);
             }
             return dic;
         }
-
-        static string TrimStr(string str)
+        private string TrimStr(string str)
         {
             if (string.IsNullOrWhiteSpace(str))
                 return string.Empty;
             return str.Replace(" ", "").Replace("\n", string.Empty).Replace("\r", string.Empty);
+        }
+        private void ShowMessage(string str = "")
+        {
+            labelMsg.Text = str;
         }
 
         #endregion
@@ -333,9 +497,7 @@ namespace wangxiao.kjcity.main
 
 
 
-    /// <summary>
-    /// 课程
-    /// </summary>
+ 
     public class Course
     {
         /// <summary>
@@ -350,6 +512,7 @@ namespace wangxiao.kjcity.main
         /// 章节
         /// </summary>
         public List<Chapter> ChapterList { set; get; }
+
     }
     public class Chapter
     {
@@ -362,18 +525,45 @@ namespace wangxiao.kjcity.main
         /// </summary>
         public List<Lesson> Lessons { set; get; }
     }
-    /// <summary>
-    /// 课
-    /// </summary>
     public class Lesson
     {
+        /// <summary>
+        /// id
+        /// </summary>
+        public int Id { set; get; }
         /// <summary>
         /// 课名
         /// </summary>
         public string LessonName { set; get; }
         /// <summary>
-        /// 地址
+        /// 防盗链地址
         /// </summary>
         public string LessonAdr { set; get; }
+        /// <summary>
+        /// 课程真实地址
+        /// </summary>
+        public string RealAdr { set; get; }
+        /// <summary>
+        /// 获取课程真实地址
+        /// </summary>
+        public string GetLessonRealAdr(CookieCollection cookies)
+        {
+            string play_video_html = HttpUtility.SendGet(this.LessonAdr, null, null, null, cookies);
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc.LoadHtml(play_video_html);
+            HtmlNode play_video_node = doc.DocumentNode.SelectSingleNode("//div[@class='play_video']");
+            string video_url = play_video_node.ChildNodes[1].Attributes["src"].Value;
+            string baseUrl;
+            NameValueCollection nvcolle;
+            StringHelper.ParseUrl(video_url, out baseUrl, out nvcolle);
+            string realAdr = string.Format(@"http://p.bokecc.com/playvideo.bo?playerid={0}&playertype=1&autoStart=true&vid={1}", nvcolle["playerid"], nvcolle["vid"]);
+            RealAdr = realAdr;
+            return realAdr;
+        }
+        /// <summary>
+        /// 是否移动完成
+        /// </summary>
+        public bool MoveComplete { set; get; }
     }
+    
 }

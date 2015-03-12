@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelMsg = new System.Windows.Forms.Label();
+            this.btmOutLogin = new System.Windows.Forms.Button();
+            this.btnMove = new System.Windows.Forms.Button();
             this.btnPlayer = new System.Windows.Forms.Button();
             this.labmsg = new System.Windows.Forms.Label();
             this.btnChapter = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.listBoxLeft = new System.Windows.Forms.ListBox();
             this.listBoxRight = new System.Windows.Forms.ListBox();
-            this.btnMove = new System.Windows.Forms.Button();
-            this.btmOutLogin = new System.Windows.Forms.Button();
-            this.labelMsg = new System.Windows.Forms.Label();
+            this.btnExcute = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExcute);
             this.groupBox1.Controls.Add(this.labelMsg);
             this.groupBox1.Controls.Add(this.btmOutLogin);
             this.groupBox1.Controls.Add(this.btnMove);
@@ -56,6 +58,35 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "相关操作";
+            // 
+            // labelMsg
+            // 
+            this.labelMsg.AutoSize = true;
+            this.labelMsg.ForeColor = System.Drawing.Color.Red;
+            this.labelMsg.Location = new System.Drawing.Point(37, 63);
+            this.labelMsg.Name = "labelMsg";
+            this.labelMsg.Size = new System.Drawing.Size(0, 12);
+            this.labelMsg.TabIndex = 7;
+            // 
+            // btmOutLogin
+            // 
+            this.btmOutLogin.Location = new System.Drawing.Point(805, 24);
+            this.btmOutLogin.Name = "btmOutLogin";
+            this.btmOutLogin.Size = new System.Drawing.Size(75, 33);
+            this.btmOutLogin.TabIndex = 6;
+            this.btmOutLogin.Text = "退出登录";
+            this.btmOutLogin.UseVisualStyleBackColor = true;
+            this.btmOutLogin.Click += new System.EventHandler(this.btmOutLogin_Click);
+            // 
+            // btnMove
+            // 
+            this.btnMove.Location = new System.Drawing.Point(380, 24);
+            this.btnMove.Name = "btnMove";
+            this.btnMove.Size = new System.Drawing.Size(75, 33);
+            this.btnMove.TabIndex = 5;
+            this.btnMove.Text = "Move视频";
+            this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
             // 
             // btnPlayer
             // 
@@ -117,34 +148,15 @@
             this.listBoxRight.Size = new System.Drawing.Size(648, 381);
             this.listBoxRight.TabIndex = 2;
             // 
-            // btnMove
+            // btnExcute
             // 
-            this.btnMove.Location = new System.Drawing.Point(380, 24);
-            this.btnMove.Name = "btnMove";
-            this.btnMove.Size = new System.Drawing.Size(75, 33);
-            this.btnMove.TabIndex = 5;
-            this.btnMove.Text = "Move视频";
-            this.btnMove.UseVisualStyleBackColor = true;
-            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
-            // 
-            // btmOutLogin
-            // 
-            this.btmOutLogin.Location = new System.Drawing.Point(805, 24);
-            this.btmOutLogin.Name = "btmOutLogin";
-            this.btmOutLogin.Size = new System.Drawing.Size(75, 33);
-            this.btmOutLogin.TabIndex = 6;
-            this.btmOutLogin.Text = "退出登录";
-            this.btmOutLogin.UseVisualStyleBackColor = true;
-            this.btmOutLogin.Click += new System.EventHandler(this.btmOutLogin_Click);
-            // 
-            // labelMsg
-            // 
-            this.labelMsg.AutoSize = true;
-            this.labelMsg.ForeColor = System.Drawing.Color.Red;
-            this.labelMsg.Location = new System.Drawing.Point(37, 63);
-            this.labelMsg.Name = "labelMsg";
-            this.labelMsg.Size = new System.Drawing.Size(0, 12);
-            this.labelMsg.TabIndex = 7;
+            this.btnExcute.Location = new System.Drawing.Point(494, 24);
+            this.btnExcute.Name = "btnExcute";
+            this.btnExcute.Size = new System.Drawing.Size(75, 33);
+            this.btnExcute.TabIndex = 8;
+            this.btnExcute.Text = "开始执行";
+            this.btnExcute.UseVisualStyleBackColor = true;
+            this.btnExcute.Click += new System.EventHandler(this.btnExcute_Click);
             // 
             // Main
             // 
@@ -177,6 +189,7 @@
         private System.Windows.Forms.Button btnMove;
         private System.Windows.Forms.Button btmOutLogin;
         private System.Windows.Forms.Label labelMsg;
+        private System.Windows.Forms.Button btnExcute;
     }
 }
 

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Course xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>2015新从业-会计基础-串讲押题班</Name>
+  <Address>http://wangxiao.kjcity.com//UserManage/chapters_play_107__.html</Address>
+  <ChapterList>
+    <Chapter>
+      <Name>2014年新大纲全国版《会计基础》考前押题 01		</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《会计基础》考前押题 02	</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《会计基础》考前押题 03</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《会计基础》考前押题 04		</Name>
+      <Lessons />
+    </Chapter>
+    <Chapter>
+      <Name>2014年新大纲全国版《会计基础》考前押题 05</Name>
+      <Lessons />
+    </Chapter>
+  </ChapterList>
+</Course>
